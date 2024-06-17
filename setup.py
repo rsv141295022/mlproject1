@@ -10,6 +10,7 @@ def get_requirements(file_path:str)->List[str]:
         
         if HYPEN_E_DOT in require:
             require.remove(HYPEN_E_DOT)
+        return require
 
 setup(
     name='mlproject1',
@@ -17,6 +18,6 @@ setup(
     author='Fame_Patcharapol',
     author_email='patcharapol.yasamut@gmail.com',
     packages=find_packages(),
-    install_requires=['pandas']
+    install_requires=get_requirements('get_requirements.txt')
     
 )
